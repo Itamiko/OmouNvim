@@ -134,8 +134,7 @@
 
 # Language{{{
 
-- { repo: honza/dockerfile.vim, on_ft: Dockerfile }
-- { repo: junegunn/vim-emoji, on_ft: [markdown,vim] }
+- { repo: junegunn/vim-emoji, on_ft: [markdown,vim,md] }
 - { repo: cespare/vim-toml, on_ft: toml }
 - { repo: vim-scripts/xml.vim, on_ft: xml}
 - { repo: pearofducks/ansible-vim, on_ft: [ yaml.ansible, ansible_hosts ]}
@@ -155,6 +154,10 @@
           \ 'js=javascript',
           \ 'go',
           \]
+
+- repo: jackguo380/vim-lsp-cxx-highlight
+  on_ft: [c,cpp,objc,objcpp]
+
 # }}}
 
 # Coding{{{
@@ -194,7 +197,6 @@
 
 - repo: iamcco/markdown-preview.nvim
   on_ft: [markdown,pandoc.markdown,rmd,md]
-  build: "cd app & npm install"
   hook_post_source: 'call mkdp#util#install()'
   hook_source: |
       let g:mkdp_auto_start = 1

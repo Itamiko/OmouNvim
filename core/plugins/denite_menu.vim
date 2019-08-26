@@ -34,7 +34,7 @@ let s:menus.tools.command_candidates = [
   \   ['🐠 File explorer      🔹', 'Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>'],
   \ ]
 
-let s:menus.config = { 'description': '🔧 Zsh Tmux Configuration' }
+let s:menus.config = { 'description': " Terminal Configuration" }
 let s:menus.config.file_candidates = [
   \   ['🐠 Zsh Configurationfile            🔸', '~/.zshrc'],
   \   ['🐠 Tmux Configurationfile           🔸', '~/.tmux.conf'],
