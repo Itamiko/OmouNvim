@@ -2,13 +2,12 @@
 
 - repo: Shougo/dein.vim
 - repo: taigacute/spaceline.vim
+- repo: wakatime/vim-wakatime
 
 - repo: bagrat/vim-buffet
   hook_add: source $VIM_PATH/core/plugins/buffet.vim
 
-- repo: wakatime/vim-wakatime # add key bindings to allkey.vim
-
-  #}}}
+# }}}
 
 # Core Plugins{{{
 
@@ -17,7 +16,7 @@
   build: "yarn install --frozen-lockfile"
   hook_add: source  $VIM_PATH/core/plugins/coc.vim
 
-  # }}}
+# }}}
 
 
 # Lazy Loading
@@ -71,7 +70,7 @@
         let g:quickrun_no_default_key_mappings = 1
 
 - {repo: simnalamburt/vim-mundo , on_map: { n: <Plug> } }
-- {repo: tpope/vim-repeat , on_map: .* } # maybe remove
+- {repo: tpope/vim-repeat , on_map: .* }
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [Whichkey, Whichkey!]
@@ -82,7 +81,7 @@
         call which_key#register(']', 'g:which_key_rsbgmap')
         call which_key#register('[', 'g:which_key_lsbgmap')
 
-- repo: easymotion/vim-easymotion # maybe remove
+- repo: easymotion/vim-easymotion
   on_map: { n: <Plug> }
   hook_source: |
         let g:EasyMotion_do_mapping = 0
@@ -135,11 +134,11 @@
 
 # Language{{{
 
-- { repo: honza/dockerfile.vim, on_ft: Dockerfile } # maybe remove
+- { repo: honza/dockerfile.vim, on_ft: Dockerfile }
 - { repo: junegunn/vim-emoji, on_ft: [markdown,vim] }
-- { repo: cespare/vim-toml, on_ft: toml } # maybe remove for coc-xml
-- { repo: vim-scripts/xml.vim, on_ft: xml} # maybe remove
-- { repo: pearofducks/ansible-vim, on_ft: [ yaml.ansible, ansible_hosts ]} # maybe remove for coc-yaml instead
+- { repo: cespare/vim-toml, on_ft: toml }
+- { repo: vim-scripts/xml.vim, on_ft: xml}
+- { repo: pearofducks/ansible-vim, on_ft: [ yaml.ansible, ansible_hosts ]}
 
 - repo: elzr/vim-json
   on_ft: json
@@ -148,7 +147,7 @@
 - repo: tpope/vim-markdown
   on_ft: markdown
   hook_add: |
-        let g:markdown_fenced_languages = [ # add .c & .h
+        let g:markdown_fenced_languages = [
           \ 'html',
           \ 'bash=sh',
           \ 'css',
@@ -200,13 +199,13 @@
   hook_source: |
       let g:mkdp_auto_start = 1
 
-#}}}
+# }}}
 
 # TextObjectOperator{{{
 
 - { repo: kana/vim-niceblock, on_map: { x: <Plug> }}
 
-- repo: machakann/vim-sandwich # this might be broken due to textobj maybe.. not experienced enough
+- repo: machakann/vim-sandwich
   on_map: { vnx: [<Plug>(operator-sandwich-,<Plug>(textobj-sandwich-]}
 
 # }}}

@@ -68,7 +68,6 @@ if has('vim_starting')
 		\   g:etc#cache_path . '/session',
 		\   g:etc#vim_path . '/spell'
 		\ ])
-
 endif
 
 call etc#init()
