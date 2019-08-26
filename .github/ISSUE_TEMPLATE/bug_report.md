@@ -1,29 +1,33 @@
 ---
 name: Bug Report
 about: Bug
+---
+
+## Problems summary
 
 ---
 
-# Problems summary
-
-
-
-
 ## Environment Information
 
- * OS:
+- neovim `:version` output:
 
- * neovim `:version` output:
+- `:checkhealth`
 
- * `:checkhealth` or `:CheckHealth` result(neovim only):
+---
 
+## How to reproduce the problem
 
-## How to reproduce the problem from neovim startup (Required!)
+1.  ...
+2.  ...
+3.  profit?
 
- 1. foo
- 2. bar
- 3. baz
+---
 
+## Error log
 
+<details>
+    <summary>log output</summary>
+    <br>
+    **!!log here!!**
+</details>
 
-## Screenshot (if possible)
