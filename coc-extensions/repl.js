@@ -1,6 +1,6 @@
 // Save the file to ~/.vim/coc-extensions
 // Usage: xmap <silent> <TAB> <Plug>(coc-repl-sendtext)
-import { commands, workspace } from 'coc.nvim'
+const { commands, workspace } = require('coc.nvim')
 
 exports.activate = context => {
   let { nvim } = workspace
