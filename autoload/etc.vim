@@ -1,6 +1,5 @@
 let g:etc#package_manager = get(g:, 'etc#package_manager', 'dein')
 
-
 let g:etc#vim_path =
 	\ get(g:, 'etc#vimpath',
 	\   exists('*stdpath') ? stdpath('config') :
@@ -22,14 +21,6 @@ let g:etc#config_paths = get(g:, 'etc#config_paths', [
 	\ 'vimrc.json',
 	\ ])
 
-function! s:check_custom_settings(filename)abort
-       let  content = readfile(a:filename)
-       if empty(content)
-           return v:false
-       endif
-       return v:true
-endfunction
-
 function! etc#init() abort
 	if empty(g:etc#package_manager) || g:etc#package_manager ==# 'none'
 		return
@@ -39,14 +30,8 @@ function! etc#init() abort
 		\   copy(g:etc#config_paths),
 		\   'g:etc#vim_path ."/". v:val'
 		\ )
-    let l:local_paths=expand($HOME.'/.thinkvim.d/local_plugins.yaml')
-	call filter(l:config_paths, 'filereadable(v:val)')
-    if filereadable(l:local_paths)
-        if s:check_custom_settings(l:local_paths)
-            call add(l:config_paths,l:local_paths)
-        endif
-    endif
-	call etc#providers#{g:etc#package_manager}#_init(l:config_paths)
+    	call filter(l:config_paths, 'filereadable(v:val)')
+    	call etc#providers#{g:etc#package_manager}#_init(l:config_paths)
 endfunction
 
 function! etc#_parse_config_files(config_paths) abort
@@ -66,3 +51,4 @@ function! etc#_parse_config_files(config_paths) abort
 	call etc#util#error(
 		\ 'Unable to read configuration files at '.string(a:config_paths))
 endfunction
+
