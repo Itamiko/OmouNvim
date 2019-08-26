@@ -158,10 +158,6 @@ if dein#tap('defx.nvim')
 				\ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
 endif
 
-if dein#tap('vim-quickrun')
-    nnoremap <silent> <localleader>r :QuickRun<CR>
-endif
-
 if dein#tap('vista.vim')
         nnoremap <silent><localleader>v :Vista!!<CR>
         nnoremap <silent><leader>fv     :Vista finder coc<CR>

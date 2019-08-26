@@ -27,6 +27,7 @@
 
 - linux
 - neovim >= 0.4.0（This fork uses floatwindow, feature support by neovim 0.4.0 & above)
+- ccls
 - python support
   - pip install --user pynvim
 - npm & yarn
@@ -46,12 +47,6 @@
 git clone --depth=1 https://github.com/itamiko/ThinkVim.git ~/.config/nvim
 ```
 
-- Note: If your system sets \$XDG_CONFIG_HOME, use that instead of ~/.config in the code above. Nvim follows the XDG base-directories convention.
-
-**_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.
-
-**_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
-
 ## PluginsDetail
 
 <details><summary><code>Normal Load Plugins</code>👈 Click</summary>
@@ -61,6 +56,7 @@ git clone --depth=1 https://github.com/itamiko/ThinkVim.git ~/.config/nvim
 | --------------------------------------------------------------------- | --------------- |
 | [taigacute/spaceline.vim](https://github.com/taigacute/spaceline.vim) | spaceline       |
 | [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)             | Autocompletaion |
+| [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime)     | wakatime        |
 
 </p>
 </details>
@@ -97,9 +93,6 @@ git clone --depth=1 https://github.com/itamiko/ThinkVim.git ~/.config/nvim
 | [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                                    | Displays tags in a window, ordered by scope                                        |
 | [liuchengxu/vista.vim](https://github.com/liuchengxu/vista.vim)                              | Viewer & Finder for LSP symbols and tags                                           |
 | [Shougo/denite.nvim](https://github.com/Shougo/denite.nvim)                                  | Dark powered asynchronous unite all interfaces                                     |
-| [elzr/vim-json](https://github.com/elzr/vim-json)                                            | json                                                                               |
-| [cespare/vim-toml](https://github.com/cespare/vim-toml)                                      | toml                                                                               |
-| [vim-scripts/xml.vim](https://github.com/vim-scripts/xml.vim)                                | xml                                                                                |
 
  </p>
  </details>

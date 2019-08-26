@@ -5,7 +5,6 @@
     "suggest.detailField":"preview",
     "suggest.snippetIndicator": "🌟",
     "suggest.triggerCompletionWait": 100,
-    "suggest.echodocSupport": true,
     "suggest.completionItemKindLabels": {
         "keyword": "\uf1de",
         "variable": "\ue79b",
