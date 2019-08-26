@@ -8,27 +8,6 @@ if dein#tap('denite.nvim')
 
         nnoremap <silent> <Leader>gl :<C-u>Denite gitlog:all<CR>
 	    nnoremap <silent> <Leader>gh :<C-u>Denite gitbranch<CR>
-        function! s:my_denite_outline(filetype) abort
-        execute 'Denite' a:filetype ==# 'go' ? "decls:'%:p'" : 'outline'
-        endfunction
-        function! s:my_denite_decls(filetype) abort
-        if a:filetype ==# 'go'
-            Denite decls
-        else
-            call denite#util#print_error('decls does not support filetypes except go')
-        endif
-        endfunction
-        function! s:my_denite_file_rec_goroot() abort
-        if !executable('go')
-            call denite#util#print_error('`go` executable not found')
-            return
-        endif
-        let out = system('go env | grep ''^GOROOT='' | cut -d\" -f2')
-        let goroot = substitute(out, '\n', '', '')
-        call denite#start(
-                \ [{'name': 'file/rec', 'args': [goroot]}],
-                \ {'input': '.go'})
-        endfunction
 endif
 
 if dein#tap('coc.nvim')
@@ -115,15 +94,6 @@ if dein#tap('vim-easy-align')
     nmap ga <Plug>(EasyAlign)
 endif
 
-
-if dein#tap('vim-go')
-	 nnoremap <silent> <LocalLeader>gi :GoImpl<CR>
-	 nnoremap <silent> <LocalLeader>gd :GoDescribe<CR>
-	 nnoremap <silent> <LocalLeader>gc :GoCallees<CR>
-	 nnoremap <silent> <LocalLeader>gC :GoCallers<CR>
-	 nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
-endif
-
 if dein#tap('vim-easygit')
 	nnoremap <silent> <Leader>gd :Gdiff<CR>
 	nnoremap <silent> <Leader>gc :Gcommit<CR>
@@ -181,15 +151,6 @@ if dein#tap('comfortable-motion.vim')
     nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
 endif
 
-if dein#tap('python_match.vim')
-	nmap <buffer> {{ [%
-	nmap <buffer> }} ]%
-endif
-
-if dein#tap('goyo.vim')
-	nnoremap <Leader>G :Goyo<CR>
-endif
-
 if dein#tap('defx.nvim')
         nnoremap <silent> <Leader>e
                \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
@@ -197,29 +158,8 @@ if dein#tap('defx.nvim')
 				\ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
 endif
 
-
-if dein#tap('vim-startify')
-    nnoremap <silent> <leader>s :Startify<CR>
-endif
-
 if dein#tap('vim-quickrun')
     nnoremap <silent> <localleader>r :QuickRun<CR>
-endif
-
-if dein#tap('dash.vim')
-        nnoremap <silent><leader>d :Dash<CR>
-endif
-
-if dein#tap('vim-expand-region')
-        xmap v <Plug>(expand_region_expand)
-        xmap V <Plug>(expand_region_shrink)
-endif
-
-if dein#tap('splitjoin.vim')
-        let g:splitjoin_join_mapping = ''
-        let g:splitjoin_split_mapping = ''
-        nmap sj :SplitjoinJoin<CR>
-        nmap sk :SplitjoinSplit<CR>
 endif
 
 if dein#tap('vista.vim')
@@ -229,11 +169,6 @@ endif
 
 if dein#tap('tagbar')
         nnoremap <silent><localleader>t :TagbarToggle<CR>
-endif
-
-if dein#tap('ale')
-        nmap [a <Plug>(ale_next_wrap)
-        nmap ]a <Plug>(ale_previous_wrap)
 endif
 
 if dein#tap('vim-easymotion')
@@ -247,16 +182,6 @@ if dein#tap('vim-which-key')
 		nnoremap <silent> <localleader> :<c-u>WhichKey  ';'<CR>
 		nnoremap <silent>[              :<c-u>WhichKey  '['<CR>
 		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>
-endif
-
-if dein#tap('vim-smartchr')
-    inoremap <expr> , smartchr#one_of(',', ',')
-    augroup MyAutoCmd
-        autocmd FileType go inoremap <buffer><expr> ;
-            \ smartchr#loop(':=',';')
-        autocmd FileType go inoremap <buffer> <expr> .
-          \ smartchr#loop('.', '<-', '->','...')
-    augroup end
 endif
 
 if dein#tap('vim-niceblock')
@@ -302,13 +227,3 @@ func! ActionMenuCodeActionsCallback(index, item) abort
 endfunc
 endif
 
-if dein#tap('vim-operator-replace')
-	xmap p <Plug>(operator-replace)
-endif
-
-if dein#tap('vim-textobj-multiblock')
-	omap <silent> ab <Plug>(textobj-multiblock-a)
-	omap <silent> ib <Plug>(textobj-multiblock-i)
-	xmap <silent> ab <Plug>(textobj-multiblock-a)
-	xmap <silent> ib <Plug>(textobj-multiblock-i)
-endif

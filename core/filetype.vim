@@ -29,5 +29,3 @@ augroup MyAutoCmd
 	autocmd FileType css,javascript,jsx,javascript.jsx setlocal backupcopy=yes
 augroup END
 
-
-

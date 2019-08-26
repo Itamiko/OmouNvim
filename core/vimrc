@@ -58,9 +58,9 @@ if has('vim_starting')
 	nnoremap m        <Nop>
 	xnoremap m        <Nop>
    if ! has('nvim') && has('pythonx')
-		if has('python3')
+		if has('python')
 			set pyxversion=3
-		elseif has('python')
+		elseif has('python2')
 			set pyxversion=2
 		endif
 	endif
@@ -123,7 +123,5 @@ if filereadable(s:user_settings_path)
 	endif
 endif
 
-
 set secure
 
-" vim: set ts=2 sw=2 tw=80 noet :

@@ -1,4 +1,3 @@
-let g:which_key_map =  {}
 let g:which_key_map = {
       \ 'name' : '+ThinkVim root ' ,
       \ '1' : 'select window-1'      ,
@@ -22,8 +21,6 @@ let g:which_key_map = {
             \ },
       \ 'e' : 'open file explorer' ,
       \ '-' : 'choose window by {prompt char}' ,
-      \ 'd' : 'search cursor word on Dash.app' ,
-      \ 'G' : 'distraction free writing' ,
       \ 'F' : 'find current file' ,
       \ 'f' : {
             \ 'name' : '+search {files cursorword word outline}',
@@ -36,7 +33,6 @@ let g:which_key_map = {
             \ },
       \ 'm' : 'open mundotree' ,
       \ 'w' : 'save file',
-      \ 's' : 'open startify screen',
       \ 'p' : 'edit pluginsconfig {filename}',
       \ 'x' : 'coc cursors operate',
       \ 'g'  :{
@@ -90,31 +86,20 @@ let g:which_key_localmap ={
       \ 'v'    : 'open vista show outline',
       \ 'r'    : 'quick run',
       \ 'm'    : 'toolkit Menu',
-      \ 'g' : {
-            \ 'name' : '+golang-toolkit',
-            \ 'i'    : 'go impl',
-            \ 'd'    : 'go describe',
-            \ 'c'    : 'go callees',
-            \ 'C'    : 'go callers',
-            \ 's'    : 'go callstack',
-            \ },
       \ }
 
 let g:which_key_rsbgmap = {
       \ 'name' : '+RightSquarebrackets',
-      \ 'a'    : 'ale nextwarp',
       \ 'c'    : 'coc nextdiagnostics',
       \ 'b'    : 'next buffer',
       \ 'g'    : 'coc gitnextchunk',
-      \ ']'    : 'jump prefunction-golang',
       \ }
 
 
 let g:which_key_lsbgmap = {
       \ 'name' : '+LeftSquarebrackets',
-      \ 'a'    : 'ale prewarp',
       \ 'c'    : 'coc prediagnostics',
       \ 'b'    : 'pre buffer',
       \ 'g'    : 'coc gitprevchunk',
-      \ '['    : 'jump nextfunction-golang',
       \ }
+

@@ -30,7 +30,6 @@ let s:menus.tools = { 'description': '⚙️  Dev Tools' }
 let s:menus.tools.command_candidates = [
   \   ['🐠 Git commands       🔹', 'Git'],
   \   ['🐠 Git log            🔹', 'Denite gitlog:all'],
-  \   ['🐠 Goyo               🔹', 'Goyo'],
   \   ['🐠 Tagbar             🔹', 'TagbarToggle'],
   \   ['🐠 File explorer      🔹', 'Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>'],
   \ ]
@@ -43,21 +42,16 @@ let s:menus.config.file_candidates = [
 
 let s:menus.thinkvim = {'description': '💎 ThinkVim Configuration files'}
 let s:menus.thinkvim.file_candidates = [
-  \   ['🐠 MainVimrc          settings: vimrc               🔹', $VIMPATH.'/core/vimrc'],
-  \   ['🐠 Initial            settings: init.vim            🔹', $VIMPATH.'/core/init.vim'],
-  \   ['🐠 General            settings: general.vim         🔹', $VIMPATH.'/core/general.vim'],
-  \   ['🐠 DeinConfig         settings: deinrc.vim          🔹', $VIMPATH.'/core/deinrc.vim'],
-  \   ['🐠 FileTypes          settings: filetype.vim        🔹', $VIMPATH.'/core/filetype.vim'],
-  \   ['🐠 Installed       LoadPlugins: plugins.yaml        🔹', $VIMPATH.'/core/dein/plugins.yaml'],
-  \   ['🐠 Installed      LocalPlugins: local_plugins.yaml  🔹', $VIMPATH.'/core/dein/local_plugins.yaml'],
-  \   ['🐠 Global   Key    Vimmappings: mappings.vim        🔹', $VIMPATH.'/core/mappings.vim'],
-  \   ['🐠 Global   Key Pluginmappings: Pluginmappings      🔹', $VIMPATH.'/core/plugins/allkey.vim'],
+  \   ['🐠 MainVimrc          settings: vimrc               🔹', '~/.config/nvim/core/vimrc'],
+  \   ['🐠 Initial            settings: init.vim            🔹', '~/.config/nvim/core/init.vim'],
+  \   ['🐠 General            settings: general.vim         🔹', '~/.config/nvim/core/general.vim'],
+  \   ['🐠 DeinConfig         settings: deinrc.vim          🔹', '~/.config/nvim/core/deinrc.vim'],
+  \   ['🐠 FileTypes          settings: filetype.vim        🔹', '~/.config/nvim/core/filetype.vim'],
+  \   ['🐠 Installed       LoadPlugins: plugins.yaml        🔹', '~/.config/nvim/core/dein/plugins.yaml'],
+  \   ['🐠 Installed      LocalPlugins: local_plugins.yaml  🔹', '~/.config/nvim/core/dein/local_plugins.yaml'],
+  \   ['🐠 Global   Key    Vimmappings: mappings.vim        🔹', '~/.config/nvim/core/mappings.vim'],
+  \   ['🐠 Global   Key Pluginmappings: Pluginmappings      🔹', '~/.config/nvim/core/plugins/allkey.vim'],
   \ ]
 
 call denite#custom#var('menu', 'menus', s:menus)
 
-"let s:menus.sessions = { 'description': 'Sessions' }
-"let s:menus.sessions.command_candidates = [
-  "\   ['▶ Restore session │ ;s', 'Denite session'],
-  "\   ['▶ Save session…   │', 'Denite session/new'],
-  "\ ]

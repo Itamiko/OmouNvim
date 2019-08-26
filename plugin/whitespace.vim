@@ -38,5 +38,3 @@ function! s:WhitespaceErase(line1, line2)
 	call setpos('.', l:save_cursor)
 endfunction
 
-" vim: set ts=2 sw=2 tw=80 noet :
-
