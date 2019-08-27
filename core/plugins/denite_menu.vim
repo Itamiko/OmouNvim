@@ -12,7 +12,6 @@ let s:menus.dein.command_candidates = [
 let s:menus.project = { 'description': '🛠  Project & Structure' }
 let s:menus.project.command_candidates = [
   \   ['🐳 File Explorer        🔸<Leader>e',        'Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>'],
-  \   ['🐳 Outline              🔸<LocalLeader>t',   'TagbarToggle'],
   \   ['🐳 Git Status           🔸<LocalLeader>gs',  'Denite gitstatus'],
   \   ['🐳 Mundo Tree           🔸<Leader>m',  'MundoToggle'],
   \ ]
@@ -30,7 +29,6 @@ let s:menus.tools = { 'description': '⚙️  Dev Tools' }
 let s:menus.tools.command_candidates = [
   \   ['🐠 Git commands       🔹', 'Git'],
   \   ['🐠 Git log            🔹', 'Denite gitlog:all'],
-  \   ['🐠 Tagbar             🔹', 'TagbarToggle'],
   \   ['🐠 File explorer      🔹', 'Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>'],
   \ ]
 

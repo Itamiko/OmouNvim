@@ -86,11 +86,6 @@ git clone https://github.com/itamiko/ThinkVim.git ~/.config/nvim
 | [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)                    | Vim motions on speed                                                               |
 | [Shougo/defx.nvim](https://github.com/Shougo/defx.nvim)                                      | Dark powered file explorer implementation                                          |
 | [kristijanhusak/defx-icons](https://github.com/https://github.com/kristijanhusak/defx-icons) | Filetype icons for Defx                                                            |
-| [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                                    | Displays tags in a window, ordered by scope                                        |
-| [liuchengxu/vista.vim](https://github.com/liuchengxu/vista.vim)                              | Viewer & Finder for LSP symbols and tags                                           |
-| [Shougo/denite.nvim](https://github.com/Shougo/denite.nvim)                                  | Dark powered asynchronous unite all interfaces                                     |
-| [tpope/vim-markdown](https://github.com/tpope/vim-markdown)                                  | Vim Markdown runtime files                                                         |
-
 
  </p>
  </details>

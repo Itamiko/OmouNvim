@@ -163,10 +163,6 @@ if dein#tap('vista.vim')
         nnoremap <silent><leader>fv     :Vista finder coc<CR>
 endif
 
-if dein#tap('tagbar')
-        nnoremap <silent><localleader>t :TagbarToggle<CR>
-endif
-
 if dein#tap('vim-easymotion')
         nmap <Leader><Leader>w <Plug>(easymotion-w)
 	    nmap <Leader><Leader>f <Plug>(easymotion-f)
