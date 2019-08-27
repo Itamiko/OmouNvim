@@ -8,7 +8,13 @@
 
 ## Feature
 
-- 🚀Fatest StartupTime(Plugins Total:62 40-60ms)
+- 🚀Fast StartupTime
+```
+Measured: 10 times
+Total Average: 52.811400 msec
+Total Max:     75.215000 msec
+Total Min:     49.551000 msec
+```
 - 💎Modular Plugin Config
 - ⚒ Easy to use Easy to hack
 - 🌟95% plugins lazyload with dein
