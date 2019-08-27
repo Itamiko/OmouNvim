@@ -1,4 +1,8 @@
 let g:buffet_tab_icon = "\uf00a"
+
+let g:buffet_use_devicons = 1
+let g:buffet_max_plug = 10
+
 function! g:BuffetSetCustomColors()
     hi! BuffetCurrentBuffer cterm=NONE ctermbg=106 ctermfg=8 guibg=#b8bb26 guifg=#000000
     hi! BuffetTrunc cterm=bold ctermbg=66 ctermfg=8 guibg=#458588 guifg=#000000

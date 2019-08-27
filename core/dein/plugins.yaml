@@ -1,7 +1,19 @@
 # StartUp Plugins{{{
 
 - repo: Shougo/dein.vim
+  depends:
+      - dein-ui.vim
+
+- repo: wsdjeg/dein-ui.vim
+  depends: dein.vim
+
 - repo: taigacute/spaceline.vim
+  hook_add: source $VIM_PATH/core/plugins/spaceline.vim
+  depends:
+      - coc.nvim
+      - coc-git
+      - vim-devicons
+
 - repo: wakatime/vim-wakatime
 
 - repo: bagrat/vim-buffet
@@ -41,10 +53,6 @@
   hook_add: let g:webdevicons_enable_denite = 1
 
 - { repo: rhysd/accelerated-jk, on_map: { n: <Plug> } }
-
-- repo: t9md/vim-choosewin
-  on_map: { n: <Plug> }
-  hook_source: source  $VIM_PATH/core/plugins/vim-choosewin.vim
 
 - repo: kizza/actionmenu.nvim
   on_path: .*

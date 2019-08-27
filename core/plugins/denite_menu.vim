@@ -2,7 +2,7 @@ let s:menus = {}
 
 let s:menus.dein = { 'description': '⚔️  Plugin management' }
 let s:menus.dein.command_candidates = [
-  \   ['🐬 Dein: Plugins update       🔸', 'call dein#update()'],
+  \   ['🐬 Dein: Plugins update       🔸', 'DeinUpdate'],
   \   ['🐬 Dein: Plugins List         🔸', 'Denite dein'],
   \   ['🐬 Dein: RecacheRuntimePath   🔸', 'call dein#recache_runtimepath()'],
   \   ['🐬 Dein: Update log           🔸', 'echo dein#get_updates_log()'],
@@ -30,12 +30,6 @@ let s:menus.tools.command_candidates = [
   \   ['🐠 Git commands       🔹', 'Git'],
   \   ['🐠 Git log            🔹', 'Denite gitlog:all'],
   \   ['🐠 File explorer      🔹', 'Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>'],
-  \ ]
-
-let s:menus.config = { 'description': " Terminal Configuration" }
-let s:menus.config.file_candidates = [
-  \   ['🐠 Zsh Configurationfile            🔸', '~/.zshrc'],
-  \   ['🐠 Tmux Configurationfile           🔸', '~/.tmux.conf'],
   \ ]
 
 let s:menus.thinkvim = {'description': '💎 ThinkVim Configuration files'}

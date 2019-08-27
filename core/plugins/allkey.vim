@@ -115,11 +115,6 @@ if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
 endif
 
-if dein#tap('vim-choosewin')
-	nmap -         <Plug>(choosewin)
-	nmap <Leader>- :<C-u>ChooseWinSwapStay<CR>
-endif
-
 if dein#tap('accelerated-jk')
 	nmap <silent>j <Plug>(accelerated_jk_gj)
 	nmap <silent>k <Plug>(accelerated_jk_gk)
