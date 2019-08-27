@@ -70,7 +70,6 @@ git clone --depth=1 https://github.com/itamiko/ThinkVim.git ~/.config/nvim
 | [t9md/vim-choosewin](https://github.com/t9md/vim-choosewin)                                  | Easy to jump window                                                                |
 | [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                          | Provide the Icons                                                                  |
 | [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)                                      | Search File Word                                                                   |
-| [honza/dockerfile.vim](https://github.com/honza/dockerfile.vim)                              | Dockerfile Supporte                                                                |
 | [junegunn/vim-easyalign](https://github.com/junegunn/vim-easyalign)                          | Easy Align                                                                         |
 | [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                                | Indent Line                                                                        |
 | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                                      | Operate Repeat                                                                     |
@@ -78,14 +77,11 @@ git clone --depth=1 https://github.com/itamiko/ThinkVim.git ~/.config/nvim
 | [yuttie/comfortable-motion.vim](https://github.com/yonchu/yuttie/comfortable-motion.vim)     | Scroll                                                                             |
 | [chemzqm/vim-easygit](https://github.com/chemzqm/vim-easygit)                                | Git wrapper focus on simplity and usability                                        |
 | [chemzqm/denite-git](https://github.com/chemzqm/denite-git)                                  | gitlog, gitstatus and gitchanged sources                                           |
-| [thinca/quickrun](https://github.com/thinca/quickrun)                                        | Quick Run                                                                          |
-| [tpope/vim-markdown](https://github.com/tpope/vim-markdown)                                  | Markdown syntax highlighting                                                       |
 | [junegunn/vim-emoji](https://github.com/junegunn/vim-emoji)                                  | emoji                                                                              |
 | [simnalamburt/vim-mundo](https://github.com/simnalamburt/vim-mundo)                          | Ultimate mundo history visualizer                                                  |
 | [machakann/vim-sandwich](https://github.com/rhysd/machakann/vim-sandwich)                    | set of operatorandtextobject plugins to search/select/edit sandwiched textobjects. |
 | [rhysd/accelerated-jk](https://github.com/rhysd/accelerated-jk)                              | Up/down movement acceleration                                                      |
 | [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)                          | Multiple cursors project                                                           |
-| [terryma/vim-expand-region](https://github.com/terryma/vim-expand-region)                    | Visually select increasingly larger regions of text                                |
 | [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)                      | Find the key                                                                       |
 | [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)                    | Vim motions on speed                                                               |
 | [Shougo/defx.nvim](https://github.com/Shougo/defx.nvim)                                      | Dark powered file explorer implementation                                          |
@@ -104,17 +100,12 @@ git clone --depth=1 https://github.com/itamiko/ThinkVim.git ~/.config/nvim
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | [coc-emoji](https://github.com/neoclide/coc-emoji)         | emoji completion                               |
 | [coc-lists](https://github.com/neoclide/coc-lists)         | coclists                                       |
-| [coc-snippets](https://github.com/neoclide/coc-snippets)   | snippets extension instead Utilsnippets        |
-| [coc-tsserver](https://github.com/neoclide/coc-tsserver)   | js/ts lsp                                      |
 | [coc-pairs](https://github.com/neoclide/coc-pairs)         | pairs completion                               |
 | [coc-json](https://github.com/neoclide/coc-json)           | json server                                    |
-| [coc-highlight](https://github.com/neoclide/coc-highlight) | Highlight the cursors word, Show the css color |
 | [coc-git](https://github.com/neoclide/coc-git)             | git extension                                  |
+| [coc-yank](https://github.com/neoclide/coc-yank)           | yank extension                                 |
+| [coc-tabnine](https://github.com/neoclide/coc-tabnine)     | tabnine extension                              |
 
 </p>
 </details>
-
-## Tutorial
-
-- check the [tutorial](/tutorial/tutorial.md) to know more about ThinkVim
 
