@@ -3,7 +3,7 @@
 > custom itamiko fork
 
 <div align="center">
-    <img src="" width="500" height="400">
+    <img src="https://github.com/Itamiko/ThinkVim/blob/master/.screenshots/c.png?raw=true" width="500" height="400">
 </div>
 
 ## Feature
