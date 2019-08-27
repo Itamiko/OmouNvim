@@ -130,6 +130,11 @@
 - repo: jackguo380/vim-lsp-cxx-highlight
   on_ft: [c,cpp,objc,objcpp]
 
+- repo: tpope/vim-markdown
+  on_ft: markdown
+  hook_add: |
+      let g:markdown_fenced_languages = ["c", "bash=sh"]
+
 # }}}
 
 # Coding{{{
