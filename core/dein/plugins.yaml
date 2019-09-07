@@ -67,7 +67,6 @@
         let g:comfortable_motion_no_default_key_mappings = 1
         let g:comfortable_motion_impulse_multiplier = 1
 
-- {repo: simnalamburt/vim-mundo , on_map: { n: <Plug> } }
 - {repo: tpope/vim-repeat , on_map: .* }
 
 - repo: liuchengxu/vim-which-key
@@ -123,10 +122,6 @@
 
 - { repo: taigacute/magit.vim, on_cmd: Magit }
 - { repo: lambdalisue/gina.vim, on_cmd: Gina }
-
-- repo: chemzqm/vim-easygit
-  on_cmd: [Gcd, Glcd, Gcommit, Gblame, Gstatus, Gdiff, Gbrowse, Gstatus, Gpush]
-  hook_source: let g:easygit_enable_command = 1
 
 # }}}
 
