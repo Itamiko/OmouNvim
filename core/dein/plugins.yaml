@@ -16,8 +16,6 @@
 
 - repo: wakatime/vim-wakatime
 
-- repo: paroxayte/vwm.vim
-
 # }}}
 
 # Core Plugins{{{
