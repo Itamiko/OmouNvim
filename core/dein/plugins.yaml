@@ -140,6 +140,7 @@
 
 
 - repo: lervag/vimtex
+  hook_add: source $VIM_PATH/core/plugins/vimtex.vim
 
 # }}}
 
