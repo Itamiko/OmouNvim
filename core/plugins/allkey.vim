@@ -87,32 +87,12 @@ if dein#tap('fzf.vim')
         nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
 endif
 
-if dein#tap('vim-easy-align')
-    " Start interactive EasyAlign in visual mode (e.g. vipga)
-    xmap ga <Plug>(EasyAlign)
-    " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-    nmap ga <Plug>(EasyAlign)
-endif
-
-if dein#tap('vim-easygit')
-	nnoremap <silent> <Leader>gd :Gdiff<CR>
-	nnoremap <silent> <Leader>gc :Gcommit<CR>
-	nnoremap <silent> <Leader>gb :Gblame<CR>
-	nnoremap <silent> <Leader>gB :Gbrowse<CR>
-	nnoremap <silent> <Leader>gS :Gstatus<CR>
-	" nnoremap <silent> <localleader>gp :Gpush<CR>
-endif
-
 if dein#tap('magit.vim')
 	nnoremap <silent> mg :Magit<CR>
 endif
 
 if dein#tap('gina.vim')
 	nnoremap <silent><Leader>gp :Gina push<CR>
-endif
-
-if dein#tap('vim-mundo')
-    nnoremap <silent> <leader>m :MundoToggle<CR>
 endif
 
 if dein#tap('accelerated-jk')
@@ -138,14 +118,6 @@ if dein#tap('caw.vim')
 	call InitCaw()
 endif
 
-
-if dein#tap('comfortable-motion.vim')
-    nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
-    nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
-    nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 4)<CR>
-    nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
-endif
-
 if dein#tap('defx.nvim')
         nnoremap <silent> <Leader>e
                \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
@@ -156,19 +128,6 @@ endif
 if dein#tap('vista.vim')
         nnoremap <silent><localleader>v :Vista!!<CR>
         nnoremap <silent><leader>fv     :Vista finder coc<CR>
-endif
-
-if dein#tap('vim-easymotion')
-        nmap <Leader><Leader>w <Plug>(easymotion-w)
-	    nmap <Leader><Leader>f <Plug>(easymotion-f)
-	    nmap <Leader><Leader>b <Plug>(easymotion-b)
-endif
-
-if dein#tap('vim-which-key')
-		nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-		nnoremap <silent> <localleader> :<c-u>WhichKey  ';'<CR>
-		nnoremap <silent>[              :<c-u>WhichKey  '['<CR>
-		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>
 endif
 
 if dein#tap('vim-niceblock')

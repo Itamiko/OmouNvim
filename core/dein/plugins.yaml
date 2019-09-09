@@ -16,8 +16,7 @@
 
 - repo: wakatime/vim-wakatime
 
-- repo: bagrat/vim-buffet
-  hook_add: source $VIM_PATH/core/plugins/buffet.vim
+- repo: paroxayte/vwm.vim
 
 # }}}
 
@@ -56,36 +55,6 @@
 
 - repo: kizza/actionmenu.nvim
   on_path: .*
-
-- repo: junegunn/vim-easy-align
-  on_ft: [vim,json,go,html,js,jsx,py,css,less,tmpl,toml,xml,sql,Dockerfile]
-
-
-- repo: yuttie/comfortable-motion.vim
-  on_func: comfortable_motion#flick
-  hook_add: |
-        let g:comfortable_motion_no_default_key_mappings = 1
-        let g:comfortable_motion_impulse_multiplier = 1
-
-- {repo: tpope/vim-repeat , on_map: .* }
-
-- repo: liuchengxu/vim-which-key
-  on_cmd: [Whichkey, Whichkey!]
-  hook_source: source  $VIM_PATH/core/plugins/whichkey.vim
-  hook_post_source: |
-        call which_key#register('<Space>', 'g:which_key_map')
-        call which_key#register(';', 'g:which_key_localmap')
-        call which_key#register(']', 'g:which_key_rsbgmap')
-        call which_key#register('[', 'g:which_key_lsbgmap')
-
-- repo: easymotion/vim-easymotion
-  on_map: { n: <Plug> }
-  hook_source: |
-        let g:EasyMotion_do_mapping = 0
-        let g:EasyMotion_prompt = 'Jump to → '
-        let g:EasyMotion_keys = 'fjdkswbeoavn'
-        let g:EasyMotion_smartcase = 1
-        let g:EasyMotion_use_smartsign_us = 1
 
 # }}}
 

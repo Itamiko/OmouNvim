@@ -3,7 +3,7 @@ let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
-let g:coc_global_extensions =['coc-pairs','coc-json','coc-emoji','coc-lists','coc-tabnine','coc-yank', 'coc-vimtex']
+let g:coc_global_extensions =['coc-pairs','coc-json','coc-emoji','coc-lists','coc-yank', 'coc-vimtex']
 
 augroup MyAutoCmd
   autocmd!
