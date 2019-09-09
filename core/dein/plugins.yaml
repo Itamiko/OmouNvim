@@ -171,6 +171,10 @@
   hook_source: |
       let g:mkdp_auto_start = 1
 
+
+- repo: lervag/vimtex
+  on_ft: [tex]
+
 # }}}
 
 # TextObjectOperator{{{
