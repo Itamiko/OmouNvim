@@ -23,6 +23,9 @@ cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 "insert a newline
 inoremap <C-O> <Esc>o
 
+" format with neoformat
+nnoremap <leader>f :Neoformat<CR>
+
 " Buffers
 " Write buffer (save)
 noremap <Leader>w :w<CR>
@@ -35,6 +38,17 @@ nnoremap <C-x>  :bdelete<CR>
 
 nnoremap <leader>bc :BufOnly<CR>
 nnoremap <Leader>bo :BufOnly 
+
+nmap <leader>1 <Plug>BuffetSwitch(1)
+nmap <leader>2 <Plug>BuffetSwitch(2)
+nmap <leader>3 <Plug>BuffetSwitch(3)
+nmap <leader>4 <Plug>BuffetSwitch(4)
+nmap <leader>5 <Plug>BuffetSwitch(5)
+nmap <leader>6 <Plug>BuffetSwitch(6)
+nmap <leader>7 <Plug>BuffetSwitch(7)
+nmap <leader>8 <Plug>BuffetSwitch(8)
+nmap <leader>9 <Plug>BuffetSwitch(9)
+nmap <leader>0 <Plug>BuffetSwitch(10)
 
 noremap <leader>tn :tabnew<cr>
 noremap <leader>te :tabedit

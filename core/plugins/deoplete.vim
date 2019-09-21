@@ -1,7 +1,12 @@
-call deoplete#custom#var('clangx', 'clang_binary', '/bin/clang')
+call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
 
-call deoplete#custom#var('tabnine', {
-\ 'line_limit': 500,
-\ 'max_num_results': 20,
-\ })
+call deoplete#custom#source('LanguageClient',
+        \ 'min_pattern_length',
+        \ 2)
+
+let g:deoplete#sources = {
+        \ 'gitcommit': ['emoji'],
+        \ 'markdown': ['emoji'],
+        \ 'vim': ['neco-vim']
+        \ }
 

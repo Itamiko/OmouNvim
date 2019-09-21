@@ -16,3 +16,4 @@ syn match LinuxError /\%>80v[^()\{\}\[\]<>]\+/
 autocmd InsertEnter * match LinuxError /\s\+\%#\@<!$/
 autocmd InsertLeave * match LinuxError /\s\+$/
 
+
