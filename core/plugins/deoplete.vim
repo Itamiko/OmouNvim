@@ -1,12 +1,9 @@
-call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
-
-call deoplete#custom#source('LanguageClient',
-        \ 'min_pattern_length',
-        \ 2)
+call deoplete#custom#option('ignore_sources', {'vim': ['tag']})
+call deoplete#custom#option('ignore_sources', {'denite-filter': ['denite', 'buffer', 'around', 'member']})
+call deoplete#custom#option('ignore_sources', {'sh': ['around', 'member', 'tag', 'syntax']})
 
 let g:deoplete#sources = {
         \ 'gitcommit': ['emoji'],
         \ 'markdown': ['emoji'],
-        \ 'vim': ['neco-vim']
         \ }
 

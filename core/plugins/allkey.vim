@@ -15,17 +15,22 @@ if dein#tap('fzf.vim')
     nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
 endif
 
-if dein#tap('magit.vim')
-    nnoremap <silent> mg :Magit<CR>
-endif
-
 if dein#tap('gina.vim')
-    nnoremap <silent><Leader>gp :Gina push<CR>
+    nnoremap <C-u>gp :Gina status --opener=10split<CR>
+    nnoremap <C-u>gp :Gina add %<CR>
+    nnoremap <C-u>gp :Gina reset -q %<CR>
+    nnoremap <C-u>gp :Gina commit<CR>
+    nnoremap <C-u>gp :Gina push<CR>
+    nnoremap <C-u>gp :Gina push<CR>
+    nnoremap <C-u>gp :Gina diff<CR>
+    nnoremap <C-u>gp :Gina add<CR>
+    nnoremap <C-u>gp :Gina blame<CR>
 endif
 
-if dein#tap('accelerated-jk')
-    nmap <silent>j <Plug>(accelerated_jk_gj)
-    nmap <silent>k <Plug>(accelerated_jk_gk)
+if dein#tap('vim-gitgutter')
+    nmap <leader>gha <Plug>(GitGutterStageHunk)
+    nmap <leader>ghr <Plug>(GitGutterUndoHunk)
+    nmap <leader>ghv <Plug>(GitGutterPreviewHunk)
 endif
 
 if dein#tap('defx.nvim')
@@ -35,3 +40,6 @@ if dein#tap('defx.nvim')
                 \ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
 endif
 
+if dein#tap('neoformat')
+    nnoremap <leader>nf :Neoformat<CR>
+endif

@@ -1,33 +1,7 @@
-" insert keymap like emacs
-inoremap <C-w> <C-[>diwa
-inoremap <C-h> <BS>
-inoremap <C-d> <Del>
-inoremap <C-k>  <ESC>d$a
-inoremap <C-u> <C-G>u<C-U>
-inoremap <C-b> <Left>
-inoremap <C-f> <Right>
-inoremap <C-a> <Home>
-inoremap <expr><C-e> pumvisible() ? "\<C-e>" : "\<End>"
-
-" command line alias
-"cnoremap w!! w !sudo tee % >/dev/null
-cnoremap <C-p> <Up>
-cnoremap <C-b> <Left>
-cnoremap <C-f> <Right>
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-d> <Del>
-cnoremap <C-h> <BS>
-cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
-
 "insert a newline
 inoremap <C-O> <Esc>o
 
-" format with neoformat
-nnoremap <leader>f :Neoformat<CR>
-
 " Buffers
-" Write buffer (save)
 noremap <Leader>w :w<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
@@ -37,18 +11,7 @@ nnoremap  [b :bnext<CR>
 nnoremap <C-x>  :bdelete<CR>
 
 nnoremap <leader>bc :BufOnly<CR>
-nnoremap <Leader>bo :BufOnly 
-
-nmap <leader>1 <Plug>BuffetSwitch(1)
-nmap <leader>2 <Plug>BuffetSwitch(2)
-nmap <leader>3 <Plug>BuffetSwitch(3)
-nmap <leader>4 <Plug>BuffetSwitch(4)
-nmap <leader>5 <Plug>BuffetSwitch(5)
-nmap <leader>6 <Plug>BuffetSwitch(6)
-nmap <leader>7 <Plug>BuffetSwitch(7)
-nmap <leader>8 <Plug>BuffetSwitch(8)
-nmap <leader>9 <Plug>BuffetSwitch(9)
-nmap <leader>0 <Plug>BuffetSwitch(10)
+nnoremap <Leader>bo :BufOnly
 
 noremap <leader>tn :tabnew<cr>
 noremap <leader>te :tabedit
@@ -56,19 +19,21 @@ noremap <leader>tm :tabmove
 noremap <leader>tc :tabclose<cr>
 
 "switch windw
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
+nnoremap <silent><C-Right> :<C-u>wincmd l<CR>
+nnoremap <silent><C-Left>  :<C-u>wincmd h<CR>
+nnoremap <silent><C-Up>    :<C-u>wincmd k<CR>
+nnoremap <silent><C-Down>  :<C-u>wincmd j<CR>
 
-"smart move
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
+"unnamedplus
+xnoremap <Leader>y "+y
+xnoremap <Leader>d "+d
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+xnoremap <Leader>p "+p
+xnoremap <Leader>P "+P
 
-"yank to end
-nnoremap Y y$
+"Use jk switch to normal mode
+inoremap jk <esc>
 
 " settings for resize splitted window
 nmap <C-w>[ :vertical resize -3<CR>
@@ -78,7 +43,17 @@ nmap <C-w>] :vertical resize +3<CR>
 nnoremap <silent> ,<Space> :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
 
 " a command which  edit PLugin config easy
-nnoremap <leader>p :EditPluginSetting <Space>
+nnoremap ecf :EditPluginSetting <Space>
+
+" Select blocks after indenting
+xnoremap < <gv
+xnoremap > >gv|
+
+" Use tab for indenting in visual mode
+xnoremap <Tab> >gv|
+xnoremap <Tab> >gv|
+nnoremap > >>_
+nnoremap < <<_
 
 " Improve scroll, credits: https://github.com/Shougo
 nnoremap <expr> zz (winline() == (winheight(0)+1) / 2) ?
