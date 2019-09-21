@@ -29,8 +29,8 @@ let s:menus.tools.command_candidates = [
   \   ['🐠 File explorer      🔹', 'Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>'],
   \ ]
 
-let s:menus.omoukvim = {'description': '💎 OmouVim Configuration files'}
-let s:menus.omouvim.file_candidates = [
+let s:menus.thinkvim = {'description': '💎 OmouVim Configuration files'}
+let s:menus.thinkvim.file_candidates = [
   \   ['🐠 MainVimrc          settings: vimrc               🔹', '~/.config/nvim/core/vimrc'],
   \   ['🐠 Initial            settings: init.vim            🔹', '~/.config/nvim/core/init.vim'],
   \   ['🐠 General            settings: general.vim         🔹', '~/.config/nvim/core/general.vim'],

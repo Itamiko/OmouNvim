@@ -1,12 +1,9 @@
 # StartUp Plugins{{{
 
 - repo: challenger-deep-theme/vim
-  hook_add: |
-      colorscheme challenger_deep
 
 - repo: Shougo/dein.vim
-  depends:
-      - dein-ui.vim
+  depends: dein-ui.vim
 
 - repo: wsdjeg/dein-ui.vim
   depends: dein.vim
@@ -16,23 +13,9 @@
 
 - repo: wakatime/vim-wakatime
 
-# }}}
-
-# Core Plugins{{{
-
-- repo: autozimu/LanguageClient-neovim
-  rev: next
-  build: "bash install.sh"
-  hook_source: source $VIM_PATH/core/plugins/LanguageClient-neovim.vim
-
 - repo: Shougo/deoplete.nvim
-  on_ft: [c,h]
-  lazy: 1
-  on_event: ["InsertEnter"]
+  hook_add: let g:deoplete#enable_at_startup = 1
   hook_source: source $VIM_PATH/core/plugins/deoplete.vim
-
-# }}}
-
 
 # Lazy Loading
 # ==========================================
@@ -43,10 +26,8 @@
   on_cmd: Denite
   depends: vim-devicons
   hook_source: |
-        source  $VIM_PATH/core/plugins/denite.vim
-        source  $VIM_PATH/core/plugins/denite_menu.vim
-
-- { repo: chemzqm/denite-git, on_source: denite.nvim }
+          source  $VIM_PATH/core/plugins/denite.vim
+          source  $VIM_PATH/core/plugins/denite_menu.vim
 
 # }}}
 
@@ -96,14 +77,28 @@
 
 # Language{{{
 
+- repo: tbodt/deoplete-tabnine
+  build: "./install.sh"
+
+- repo: Shougo/deoplete-clangx
+  on_ft: [c,h]
+  hook: source  $VIM_PATH/core/plugins/deoplete-clangx.vim
+
+- repo: Shougo/neoinclude.vim
+  on_ft: [c,h]
+
 - repo: tpope/vim-markdown
   on_ft: markdown
-  hook_add: |
-      let g:markdown_fenced_languages = ["c", "bash=sh"]
+  hook_add: let g:markdown_fenced_languages = ["c", "bash=sh", "go"]
+
+- repo: Shougo/neco-vim
+  on_ft: vim
 
 # }}}
 
 # Coding{{{
+
+- repo: tpope/vim-surround
 
 - repo: Yggdroot/indentLine
   on_ft: [c,h]

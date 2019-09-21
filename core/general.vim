@@ -4,6 +4,8 @@ if has('termguicolors')
 	set termguicolors
 endif
 
+colorscheme challenger_deep
+
 set nobackup
 set noswapfile
 set autoread

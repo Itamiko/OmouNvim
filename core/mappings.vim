@@ -32,25 +32,26 @@ imap <C-Q> <esc>:wq<CR>
 nnoremap  ]b :bprevious<CR>
 nnoremap  [b :bnext<CR>
 nnoremap <C-x>  :bdelete<CR>
+
 nnoremap <leader>bc :BufOnly<CR>
-nnoremap <Leader>bo :BufOnly
+nnoremap <Leader>bo :BufOnly 
 
 noremap <leader>tn :tabnew<cr>
 noremap <leader>te :tabedit
 noremap <leader>tm :tabmove
-noremap <leader>tc :tabclose
+noremap <leader>tc :tabclose<cr>
 
 "switch windw
-nnoremap <C-a>h
-nnoremap <C-d>l
-nnoremap <C-s>j
-nnoremap <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 
 "smart move
-nnoremap s gj
-nnoremap w gk
-vnoremap s gj
-vnoremap w gk
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 "yank to end
 nnoremap Y y$
