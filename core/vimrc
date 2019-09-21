@@ -76,8 +76,9 @@ call etc#util#source_file('core/general.vim')
 call etc#util#source_file('core/filetype.vim')
 call etc#util#source_file('core/mappings.vim')
 
-" Initialize user favorite colorscheme
-call theme#init()
+" Theme to load
+
+" Plugin color
 call etc#util#source_file('core/color.vim')
 
 set secure

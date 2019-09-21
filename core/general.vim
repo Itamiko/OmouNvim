@@ -22,10 +22,6 @@ set showtabline=2
 set statusline=-        " hide file name in statusline
 set fillchars+=vert:\|  " add a bar for vertical splits
 
-if get(g:,'gruvbox_transp_bg',1)
- set fcs=eob:\           " hide ~
-endif
-
 if has('clipboard')
 	set clipboard& clipboard+=unnamedplus
 endif
@@ -45,9 +41,9 @@ set backspace=indent,eol,start
 " Tabs and Indents {{{
 " ----------------
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
 set smarttab
 set autoindent
 set smartindent
@@ -56,7 +52,6 @@ set shiftround
 set hidden
 set shortmess=aFc
 set signcolumn=yes
-set completefunc=emoji#complete
 set completeopt=longest,menu
 set completeopt-=preview
 set list
@@ -69,7 +64,6 @@ set incsearch       " Incremental search
 set hlsearch        " Highlight search results
 set wrapscan        " Searches wrap around the end of the file
 set showmatch       " Jump to matching bracket
-set matchpairs+=<:> " Add HTML brackets to pair matching
 set matchtime=1     " Tenths of a second to show the matching paren
 set cpoptions-=m    " showmatch will wait 0.5s or until a char is typed
 set grepprg=rg\ --vimgrep\ $*

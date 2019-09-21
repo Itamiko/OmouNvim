@@ -1,5 +1,9 @@
 # StartUp Plugins{{{
 
+- repo: challenger-deep-theme/vim
+  hook_add: |
+      colorscheme challenger_deep
+
 - repo: Shougo/dein.vim
   depends:
       - dein-ui.vim
@@ -7,12 +11,8 @@
 - repo: wsdjeg/dein-ui.vim
   depends: dein.vim
 
-- repo: taigacute/spaceline.vim
-  hook_add: source $VIM_PATH/core/plugins/spaceline.vim
-  depends:
-      - coc.nvim
-      - coc-git
-      - vim-devicons
+- repo: vim-airline/vim-airline
+  hook_add: source $VIM_PATH/core/plugins/vim-airline.vim
 
 - repo: wakatime/vim-wakatime
 
@@ -20,10 +20,16 @@
 
 # Core Plugins{{{
 
-- repo: neoclide/coc.nvim
-  merge: 0
-  build: "yarn install --frozen-lockfile"
-  hook_add: source  $VIM_PATH/core/plugins/coc.vim
+- repo: autozimu/LanguageClient-neovim
+  rev: next
+  build: "bash install.sh"
+  hook_source: source $VIM_PATH/core/plugins/LanguageClient-neovim.vim
+
+- repo: Shougo/deoplete.nvim
+  on_ft: [c,h]
+  lazy: 1
+  on_event: ["InsertEnter"]
+  hook_source: source $VIM_PATH/core/plugins/deoplete.vim
 
 # }}}
 
@@ -62,10 +68,6 @@
   on_cmd: Defx
   hook_source: source  $VIM_PATH/core/plugins/defx.vim
 
-- repo: kristijanhusak/defx-git
-  on_source: defx.nvim
-  hook_source: source  $VIM_PATH/core/plugins/defx-git.vim
-
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
 
@@ -94,12 +96,6 @@
 
 # Language{{{
 
-- { repo: junegunn/vim-emoji, on_ft: [markdown,vim,md] }
-- { repo: pearofducks/ansible-vim, on_ft: [ yaml.ansible, ansible_hosts ]}
-
-- repo: jackguo380/vim-lsp-cxx-highlight
-  on_ft: [c,cpp,objc,objcpp]
-
 - repo: tpope/vim-markdown
   on_ft: markdown
   hook_add: |
@@ -109,47 +105,13 @@
 
 # Coding{{{
 
-- repo: tyru/caw.vim
-  on_map: { nx: <Plug> }
-
-- repo: sbdchd/neoformat
-  on_cmd: [Neoformat,Neoformat!]
-  hook_source: source  $VIM_PATH/core/plugins/neoformat.vim
-
 - repo: Yggdroot/indentLine
   on_ft: [c,h]
   hook_source: source $VIM_PATH/core/plugins/indentline.vim
 
-- repo: liuchengxu/vista.vim
-  on_cmd: [Vista,Vista!,Vista!!]
-  hook_source: source  $VIM_PATH/core/plugins/vista.vim
-
 - repo: luochen1990/rainbow
   on_ft: [c,h]
   hook_source: let g:rainbow_active = 1
-
-# }}}
-
-# Writing{{{
-
-- repo: iamcco/markdown-preview.nvim
-  on_ft: [markdown,pandoc.markdown,rmd,md]
-  build: "cd app && npm i"
-  hook_source: |
-      let g:mkdp_auto_start = 1
-
-
-- repo: lervag/vimtex
-  hook_add: source $VIM_PATH/core/plugins/vimtex.vim
-
-# }}}
-
-# TextObjectOperator{{{
-
-- { repo: kana/vim-niceblock, on_map: { x: <Plug> }}
-
-- repo: machakann/vim-sandwich
-  on_map: { vnx: [<Plug>(operator-sandwich-,<Plug>(textobj-sandwich-]}
 
 # }}}
 

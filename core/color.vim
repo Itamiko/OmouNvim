@@ -14,12 +14,6 @@ highlight! link pythonIndentError NONE
 " ---------------------------------------------------------
 hi PMenuSel ctermfg=252 ctermbg=106 guifg=#d0d0d0 guibg=#859900 guisp=#859900 cterm=NONE gui=NONE
 
-"coc setting
-" ---------------------------------------------------------
-hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
-hi default CocHighlightText  guibg=#725972 ctermbg=96
-hi CocWarningSign  ctermfg=32 ctermbg=NONE guifg=#0087d7 guibg=NONE
-
 " Defx Highlight
 " ---------------------------------------------------------
 highlight Defx_filename_3_Modified  ctermfg=1  guifg=#D370A3
@@ -31,11 +25,7 @@ highlight def link Defx_filename_3_Renamed Title
 highlight def link Defx_filename_3_Unmerged Label
 " highlight Defx_git_Deleted   ctermfg=13 guifg=#b294bb
 
-" buftabline highlight
-" ---------------------------------------------------------
-highlight BufTabLineCurrent ctermbg=96 guibg=#5d4d7a
-
-" buftabline highlight
+" magit highlight
 " ---------------------------------------------------------
 highlight  gitInfoRepotitle    guibg=NONE guisp=NONE gui=bold cterm=bold
 highlight  gitInfoHeadtitle   guibg=NONE guisp=NONE gui=bold cterm=bold

@@ -20,39 +20,38 @@ cnoremap <C-d> <Del>
 cnoremap <C-h> <BS>
 cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 
+"insert a newline
+inoremap <C-O> <Esc>o
+
+" Buffers
 " Write buffer (save)
 noremap <Leader>w :w<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
 
-"insert a newline
-inoremap <C-O> <Esc>o
+nnoremap  ]b :bprevious<CR>
+nnoremap  [b :bnext<CR>
+nnoremap <C-x>  :bdelete<CR>
+nnoremap <leader>bc :BufOnly<CR>
+nnoremap <Leader>bo :BufOnly
 
-nnoremap  ]b :bp<CR>
-nnoremap  [b :bn<CR>
-"delete buffer
-nnoremap <C-x>  :bd<CR>
-
-"switch windw
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-
-"smart move
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-
-"tabline operation
 noremap <leader>tn :tabnew<cr>
 noremap <leader>te :tabedit
 noremap <leader>tm :tabmove
+noremap <leader>tc :tabclose
 
-"buffer
-nnoremap <leader>bc :BufOnly<CR>
-nnoremap <Leader>bo :BufOnly 
+"switch windw
+nnoremap <C-a>h
+nnoremap <C-d>l
+nnoremap <C-s>j
+nnoremap <C-w>k
+
+"smart move
+nnoremap s gj
+nnoremap w gk
+vnoremap s gj
+vnoremap w gk
+
 "yank to end
 nnoremap Y y$
 
@@ -65,17 +64,6 @@ nnoremap <silent> ,<Space> :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
 
 " a command which  edit PLugin config easy
 nnoremap <leader>p :EditPluginSetting <Space>
-
-nmap <leader>1 <Plug>BuffetSwitch(1)
-nmap <leader>2 <Plug>BuffetSwitch(2)
-nmap <leader>3 <Plug>BuffetSwitch(3)
-nmap <leader>4 <Plug>BuffetSwitch(4)
-nmap <leader>5 <Plug>BuffetSwitch(5)
-nmap <leader>6 <Plug>BuffetSwitch(6)
-nmap <leader>7 <Plug>BuffetSwitch(7)
-nmap <leader>8 <Plug>BuffetSwitch(8)
-nmap <leader>9 <Plug>BuffetSwitch(9)
-nmap <leader>0 <Plug>BuffetSwitch(10)
 
 " Improve scroll, credits: https://github.com/Shougo
 nnoremap <expr> zz (winline() == (winheight(0)+1) / 2) ?

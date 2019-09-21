@@ -5,9 +5,9 @@ call denite#custom#option('_', {
 		\ 'highlight_filter_background': 'DeniteFilter',
 		\ 'highlight_matched_char': 'Underlined',
 		\ 'matchers': 'matcher/fruzzy',
-		\ 'prompt': 'λ ',
+		\ 'prompt': '希望',
 		\ 'split': 'floating',
-		\ 'start_filter': v:true,
+		\ 'start_filter': v:false,
 		\ 'statusline': v:false,
 		\ })
 function! s:denite_detect_size() abort
