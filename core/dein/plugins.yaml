@@ -7,9 +7,10 @@
 
 - repo: challenger-deep-theme/vim
 
-- repo: Shougo/deoplete.nvim
-  hook_add: let g:deoplete#enable_at_startup = 1
-  hook_source: source $VIM_PATH/core/plugins/deoplete.vim
+- repo: neoclide/coc.nvim
+  merge: 0
+  rev: release
+  hook_source: source $VIM_PATH/core/plugins/coc.vim
 
 # }}}
 
@@ -18,50 +19,31 @@
 - repo: wsdjeg/vim-assembly
   merged: 0
 
-- repo: Shougo/deoplete-clangx
-
-- repo: arakashic/chromatica.nvim
-  merged: 0
-  hook_source: source $VIM_PATH/core/plugins/chromatica.vim
-
-- repo: Shougo/echodoc.vim
-  hook_add: let g:echodoc#enable_at_startup = 1
-  hook_source: source $VIM_PATH/core/plugins/echodoc.vim
-
-- repo: Shougo/neoinclude.vim
-
 - repo: tpope/vim-markdown
   on_ft: markdown
   hook_add: let g:markdown_fenced_languages = ["c", "bash=sh", "go"]
 
-- repo: fszymanski/deoplete-emoji
 
 # }}}
 
 # Tools {{{
 
-- repo: editorconfig/editorconfig-vim
-  merged: 0
-
 - repo: wakatime/vim-wakatime
 
 - repo: sbdchd/neoformat
 
-- repo: neomake/neomake
-  hook_source: source $VIM_PATH/core/plugins/neomake.vim
-
-- repo: ntpeters/vim-better-whitespace
-  on_cmd:
-    [
-      "StripWhitespace",
-      "ToggleWhitespace",
-      "DisableWhitespace",
-      "EnableWhitespace",
-    ]
+- repo: Shougo/echodoc.vim
+  on_event: CompleteDone
+  hook_source: |
+    call echodoc#enable()
+    let g:echodoc#type = "virtual"
 
 # }}}
 
 # Interface{{{
+
+- repo: kizza/actionmenu.nvim
+  on_path: .*
 
 - repo: Shougo/denite.nvim
   on_cmd: Denite
@@ -73,10 +55,6 @@
   hook_add: let g:webdevicons_enable_denite = 1
 
 - repo: vim-jp/vimdoc-ja
-
-- repo: vim-chat/vim-chat
-  merged: 0
-  loadconf: 1
 
 # }}}
 
@@ -110,7 +88,4 @@
 - repo: lambdalisue/gina.vim
   on_cmd: Gina
 
-- repo: airblade/vim-gitgutter
-  on_path: .*
-  hook_source: source $VIM_PATH/core/plugins/vim-gitgutter.vim
 # }}}
