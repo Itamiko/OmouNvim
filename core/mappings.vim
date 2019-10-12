@@ -18,7 +18,7 @@ noremap <leader>te :tabedit
 noremap <leader>tm :tabmove
 noremap <leader>tc :tabclose<cr>
 
-"switch windw
+"switch window
 nnoremap <silent><C-Right> :<C-u>wincmd l<CR>
 nnoremap <silent><C-Left>  :<C-u>wincmd h<CR>
 nnoremap <silent><C-Up>    :<C-u>wincmd k<CR>
@@ -41,9 +41,6 @@ nmap <C-w>] :vertical resize +3<CR>
 
 " Remove spaces at the end of lines
 nnoremap <silent> ,<Space> :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
-
-" a command which  edit PLugin config easy
-nnoremap ecf :EditPluginSetting <Space>
 
 " Select blocks after indenting
 xnoremap < <gv

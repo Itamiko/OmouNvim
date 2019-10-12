@@ -2,54 +2,67 @@
 
 - repo: Shougo/dein.vim
 
-- repo: wsdjeg/dein-ui.vim
-  depends: Shougo/dein.vim
-
 - repo: morhetz/gruvbox
 
-- repo: neoclide/coc.nvim
-  merge: 0
-  rev: release
-  hook_source: source $VIM_PATH/core/plugins/coc.vim
+# Inner core {{{
+
+- repo: Shougo/deoplete.nvim
+  hook_add: let g:deoplete#enable_at_startup = 1
+  hook_source: source  $VIM_PATH/core/plugins/deoplete.vim
+
+- repo: prabirshrestha/async.vim
+- repo: prabirshrestha/vim-lsp
+- repo: lighttiger2505/deoplete-vim-lsp
 
 # }}}
 
-# language plugins {{{
+# }}}
 
-- repo: wsdjeg/vim-assembly
-  merged: 0
+# Language Highlighting {{{ ..... idek spel
+
+- repo: jackguo380/vim-lsp-cxx-highlight
+
+# }}}
+
+
+# Language plugins {{{
+
+- repo: Shougo/neco-vim
+  on_ft: vim
+
+- repo: dag/vim-fish
+  on_ft: fish
+
+- repo: ponko2/deoplete-fish
+  on_ft: fish
+
+- repo: deoplete-plugins/deoplete-asm
+  on_ft: asm
 
 - repo: tpope/vim-markdown
   on_ft: markdown
   hook_add: let g:markdown_fenced_languages = ["c", "bash=sh", "go"]
 
-
 # }}}
 
 # Tools {{{
+
+- repo: Shougo/neopairs.vim
+
+- repo: Shougo/echodoc.vim
+  on_event: CompleteDone
+  hook_source: |
+        let g:echodoc#enable_at_startup = 1
+        let g:echodoc#type = 'floating'
+        highlight link EchoDocFloat Pmenu
 
 - repo: wakatime/vim-wakatime
 
 - repo: sbdchd/neoformat
 
-- repo: Shougo/echodoc.vim
-  on_event: CompleteDone
-  hook_source: |
-    call echodoc#enable()
-    let g:echodoc#type = "virtual"
-
 # }}}
 
 # Interface{{{
-
-- repo: kizza/actionmenu.nvim
-  on_path: .*
-
-- repo: Shougo/denite.nvim
-  on_cmd: Denite
-  hook_source: |
-    source  $VIM_PATH/core/plugins/denite.vim
-    source  $VIM_PATH/core/plugins/denite_menu.vim
 
 - repo: ryanoasis/vim-devicons
   hook_add: let g:webdevicons_enable_denite = 1
@@ -66,20 +79,6 @@
 
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
-
-# }}}
-
-# Search Plugins{{{
-
-- repo: junegunn/fzf
-  build: "./install --all"
-  merged: 0
-
-- repo: junegunn/fzf.vim
-  depends: fzf
-  on_cmd: [Colors, Rg, Buffers]
-  on_func: Fzf_dev
-  hook_source: source  $VIM_PATH/core/plugins/fzf.vim
 
 # }}}
 
