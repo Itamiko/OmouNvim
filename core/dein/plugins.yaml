@@ -5,7 +5,7 @@
 - repo: wsdjeg/dein-ui.vim
   depends: Shougo/dein.vim
 
-- repo: challenger-deep-theme/vim
+- repo: morhetz/gruvbox
 
 - repo: neoclide/coc.nvim
   merge: 0
