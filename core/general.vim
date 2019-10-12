@@ -4,7 +4,8 @@ if has('termguicolors')
 	set termguicolors
 endif
 
-colorscheme challenger_deep
+colorscheme gruvbox
+set background=dark
 
 set nobackup
 set noswapfile
